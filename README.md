@@ -3,12 +3,19 @@ Shortcut that will allow refresh a YouTube video to where it might have glitched
 
 Recently while using YouTube, I found that often times either the video stops completely or only the audio plays but the video is frozen. So I figured out a script that would reload the page where you were last viewing. I was inspired by [this bookmark script](https://github.com/benscabbia/x-ray).
 
-# Usage
+# Setup
 ```javascript
 javascript: (function () { var re = window.location.href.match(/v=([^\?&"'>]+)/g); if (re && re.length > 0) { window.location='https://youtu.be/' + re[0].split('=')[1] + "?t=" + Math.round(document.getElementById('movie_player').getCurrentTime()); }})();
 ``` 
+Two methods:
+* Highlight and drag this code onto your bookmarks bar
+* or create a bookmark and paste the code in the URL/location field. 
 
-Highlight and drag this code onto your bookmarks bar, or create a bookmark and paste the code in the URL/location field.
+![Refresh YouTube setup demo](http://i.imgur.com/azSs481.gif "Refresh YouTube setup demo")
+
+# Usage
+
+Whenever you are watching a YouTube video and see it stuck somehow, just click on your new bookmark.
 
 # Line by line explanation of the code
 
